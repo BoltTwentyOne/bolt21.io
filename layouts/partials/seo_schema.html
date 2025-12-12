@@ -1,45 +1,32 @@
 <!-- Primary Meta Tags -->
+{{ $title := .Title }}
 {{ if .Params.PageTitle }}
-    <meta name="title" content="{{ .Params.PageTitle }}">
-{{ else }}
-    <meta name="title" content="{{ .Title }}">
-{{ end}}
+  {{ $title = .Params.PageTitle }}
+{{ end }}
+{{ $description := .Description | default .Summary }}
+{{ $image := .Params.image | default .Params.seoimage }}
 
-<meta name="description" content="{{ .Description }}">
-<meta name="summary" content="{{ .Summary }}" >
-<meta name="date" content="{{ .Date }}" >
+<meta name="title" content="{{ $title }}">
+<meta name="description" content="{{ $description }}">
 
 <!-- Open Graph / Facebook -->
-{{ if .Params.PageTitle}}
-<meta name="og:title" content="{{ .Params.PageTitle }}">
-{{ else }}
-<meta name="og:title" content="{{ .Title }}">
-{{ end }}
-<meta property="og:date" content="{{ .Date }}" />
-<meta property="og:description" content="{{ .Description }}">
-
-<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.seoimage  }}">
+<meta property="og:type" content="{{ if eq .Section "blog" }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="og:type" content="website">
-
-{{if eq site.BaseURL "{{ .Site.BaseURL }}/"}}
-{{- if .Params.noIndex -}}
-<meta name="robots" content="noindex, nofollow">
-{{- else -}}
-<meta name="robots" content="index, follow">
-{{- end -}}
-{{ else }}
-<meta name="robots" content="noindex, nofollow">
-{{ end }}
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+{{ with $image }}<meta property="og:image" content="{{ $.Site.BaseURL }}{{ . }}">{{ end }}
+<meta property="og:site_name" content="{{ .Site.Title }}">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="{{ .Permalink }}">
-{{ if .Params.PageTitle}}
-<meta name="twitter:title" content="{{ .Params.PageTitle }}">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{ with $image }}<meta name="twitter:image" content="{{ $.Site.BaseURL }}{{ . }}">{{ end }}
+
+<!-- Robots -->
+{{ if or .Params.noIndex (eq hugo.Environment "development") }}
+<meta name="robots" content="noindex, nofollow">
 {{ else }}
-<meta name="twitter:title" content="{{ .Title }}">
-{{ end}}
-<meta name="twitter:description" content="{{ .Description }}">
-<meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.image  }}">
+<meta name="robots" content="index, follow">
+{{ end }}
