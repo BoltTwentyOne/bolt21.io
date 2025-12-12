@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run css:watch\" \"npm run css:pages:watch\" \"hugo server\"",
+    "css:rebuild": "npm run css:build && npm run css:pages:build",
     "build": "npm run css:build && npm run css:pages:build && hugo --gc --minify",
     "css:build": "postcss assets/css/main.css -o static/css/main.css",
     "css:watch": "postcss assets/css/main.css -o static/css/main.css --watch",
