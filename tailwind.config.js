@@ -4,6 +4,7 @@ module.exports = {
     "./layouts/**/*.html",
     "./content/**/*.{html,md}",
     "./assets/**/*.js",
+    "./assets/scss/**/*.scss",
   ],
   // Minimal safelist - only for DevTools testing and CMS content
   // Most classes are auto-detected from templates by Tailwind JIT
