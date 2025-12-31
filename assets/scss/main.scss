@@ -258,32 +258,215 @@
 // Add your project-specific styles below using full SCSS power!
 // ==========================================================================
 
-// Example: Custom component with nesting
-.hero {
-  @include flex-center;
-  min-height: 60vh;
-  background: linear-gradient(135deg, $primary 0%, darken($primary, 15%) 100%);
-  color: white;
+// Site-wide gradient background (light top-right to dark bottom-left)
+.site-gradient {
+  background: linear-gradient(to bottom, #272b36 0%, #000000 100%);
+  min-height: 100vh;
+}
 
-  &__title {
-    @include heading(2.5rem);
-    margin-bottom: 1rem;
+// ==========================================================================
+// ANIMATIONS
+// ==========================================================================
 
-    @include md {
-      font-size: 3.5rem;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.fade-in-scale {
+  animation: fadeInScale 1s ease-out forwards;
+  opacity: 0;
+}
+
+.delay-1 {
+  animation-delay: 0.15s;
+}
+
+.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.delay-3 {
+  animation-delay: 0.45s;
+}
+
+// Store badges in hero and download section
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  height: 44px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    height: 44px;
+    width: auto;
+  }
+
+  // Google Play badge has extra padding built into the image
+  img[alt*="Google Play"] {
+    height: 66px;
+  }
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+// Header styles
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: background-color 0.3s ease;
+
+  &.scrolled {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .header-container {
+    padding: 30px 0;
+  }
+}
+
+// Add padding to body to account for fixed header
+body.site-gradient {
+  padding-top: 100px;
+}
+
+// Footer styles
+.site-footer {
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  .footer-container {
+    padding: 60px 0 40px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
     }
 
-    @include lg {
-      font-size: 4.5rem;
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
     }
   }
 
-  &__subtitle {
-    font-size: 1.125rem;
-    opacity: 0.9;
+  .footer-brand {
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: white;
+      margin-bottom: 15px;
 
-    @include md {
-      font-size: 1.25rem;
+      img {
+        height: 32px;
+        width: auto;
+      }
+
+      span {
+        font-weight: 700;
+        font-size: 1.125rem;
+      }
+    }
+
+    .footer-tagline {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9375rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+
+  .footer-links {
+    h5 {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 15px;
+      color: white;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 0.9375rem;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .footer-copyright {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+
+    p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.875rem;
+      margin: 0;
     }
   }
 }
