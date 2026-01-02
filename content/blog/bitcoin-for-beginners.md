@@ -1,11 +1,12 @@
 ---
 css: ["blog.css"]
+priority: 0.5
 title: "Bitcoin for Beginners: Complete Guide to Getting Started in 2024"
 description: "New to Bitcoin? Learn the basics of cryptocurrency, how Bitcoin works, how to buy and store it safely, and start your journey to financial sovereignty."
 date: 2024-11-22
 author: 'Bolt21 Team'
 tags: ['beginner', 'bitcoin', 'guide', 'education']
-image: '/images/blog/bitcoin-beginners.png'
+image: '/images/blog/bitcoin-for-beginners.png'
 ---
 
 # Bitcoin for Beginners: Complete Guide to Getting Started in 2024
@@ -204,7 +205,7 @@ Bitcoin has two layers:
 - Best for large amounts or long-term storage
 
 ### Lightning (Layer 2)
-- Instant payments (seconds)
+- Near-near-instant payments (seconds)
 - Negligible fees (< 1 cent)
 - Best for everyday transactions
 - Built on top of Bitcoin

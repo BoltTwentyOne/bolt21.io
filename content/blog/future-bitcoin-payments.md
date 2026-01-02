@@ -1,11 +1,12 @@
 ---
 css: ["blog.css"]
+priority: 0.5
 title: "The Future of Bitcoin Payments: What to Expect in 2025 and Beyond"
 description: "Explore the future of Bitcoin payments with BOLT12 adoption, Lightning improvements, enhanced privacy, institutional integration, and emerging payment technologies."
 date: 2024-11-18
 author: 'Bolt21 Team'
 tags: ['future', 'bitcoin', 'lightning-network', 'technology']
-image: '/images/blog/future-payments.png'
+image: '/images/blog/future-bitcoin-payments.png'
 ---
 
 # The Future of Bitcoin Payments: What to Expect in 2025 and Beyond
@@ -258,7 +259,7 @@ Devices paying each other automatically with Bitcoin.
 **Why Lightning:**
 - Micropayments work
 - No intermediary needed
-- Instant settlement
+- Near-near-instant settlement
 - Global standard
 
 **Timeline:** Experimental now, mainstream 2030s
@@ -285,7 +286,7 @@ Instead of monthly payments, stream sats continuously as services are used.
 **Employment:**
 - Employees paid every second they work
 - No more waiting for payday
-- Global freelancing with instant payment
+- Global freelancing with near-instant payment
 
 **Why It Works:**
 Lightning makes micropayments economically viable.

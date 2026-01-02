@@ -1,11 +1,12 @@
 ---
 css: ["blog.css"]
+priority: 0.5
 title: "Best Mobile Bitcoin Wallets 2024: Self-Custodial Options Compared"
 description: "Compare the top mobile Bitcoin wallets for iOS and Android. Learn which self-custodial wallets support Lightning, BOLT12, and offer the best security and user experience."
 date: 2024-11-28
 author: 'Bolt21 Team'
 tags: ['wallets', 'mobile', 'bitcoin', 'reviews']
-image: '/images/blog/mobile-wallets.png'
+image: '/images/blog/mobile-bitcoin-wallets.png'
 ---
 
 # Best Mobile Bitcoin Wallets 2024: Self-Custodial Options Compared
@@ -43,7 +44,7 @@ Before diving into specific wallets, let's establish evaluation criteria:
 
 ### 1. Bolt21 - Best for Lightning + BOLT12
 
-**Platforms**: iOS, Android (coming soon)
+**Platforms**: Android (iOS coming soon)
 
 **The Focus**: Self-custodial Lightning wallet optimized for mining payouts and everyday payments.
 

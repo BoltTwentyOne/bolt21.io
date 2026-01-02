@@ -1,5 +1,6 @@
 ---
 css: ["blog.css"]
+priority: 0.5
 title: "Self-Custodial Wallets: Why You Should Control Your Bitcoin Keys"
 description: "Learn why self-custodial wallets are essential for Bitcoin security. Understand the difference between custodial and non-custodial wallets, and how to protect your funds."
 date: 2024-12-10
@@ -105,7 +106,7 @@ No complicated seed derivation paths, no hardware requirements, no technical jar
 - Obvious warnings for risky actions
 
 ### Lightning Network Integration
-Receive instant payments with low fees while maintaining full custody of your Bitcoin. No need to choose between convenience and security.
+Receive near-instant payments with low fees while maintaining full custody of your Bitcoin. No need to choose between convenience and security.
 
 ## Common Myths About Self-Custody
 

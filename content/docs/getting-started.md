@@ -1,5 +1,6 @@
 ---
 title: 'Getting Started'
+priority: 0.6
 description: 'How to set up your Bolt21 self-custodial Lightning wallet and start receiving Bitcoin payments instantly. Create your wallet, secure your recovery phrase, get paid.'
 weight: 1
 layout: 'docs'
@@ -12,7 +13,7 @@ Welcome to Bolt21! This guide will help you set up your self-custodial Lightning
 
 ## Download the App
 
-1. Download Bolt21 from the [App Store](#) or [Google Play](#)
+1. Download Bolt21 from [Google Play](#) (iOS coming soon)
 2. Open the app and tap "Create New Wallet"
 
 ## Create Your Wallet

@@ -1,11 +1,12 @@
 ---
 css: ["blog.css"]
+priority: 0.5
 title: "Bitcoin Payments for Merchants: Complete 2024 Guide"
 description: "Learn how to accept Bitcoin payments as a merchant. Compare payment processors, understand Lightning vs on-chain, reduce fees, and avoid common pitfalls."
 date: 2024-12-08
 author: 'Bolt21 Team'
 tags: ['payments', 'merchants', 'bitcoin', 'lightning-network']
-image: '/images/blog/bitcoin-payments.png'
+image: '/images/blog/bitcoin-payments-guide.png'
 ---
 
 # Bitcoin Payments for Merchants: Complete 2024 Guide
@@ -61,7 +62,7 @@ Layer 2 protocol for instant, cheap payments.
 - Recurring payments
 
 **Pros:**
-- Instant settlement (seconds)
+- Near-near-instant settlement (seconds)
 - Negligible fees (< 1 sat)
 - Perfect for micropayments
 - Scales to millions of transactions

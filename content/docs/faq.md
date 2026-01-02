@@ -1,5 +1,6 @@
 ---
 title: 'FAQ'
+priority: 0.6
 description: 'Frequently asked questions about Bolt21. Learn about wallet security, recovery phrases, Lightning payments, BOLT12 offers, and receiving Ocean mining payouts.'
 layout: 'docs'
 weight: 3
@@ -53,6 +54,6 @@ Ocean can pay out as little as 2,000 sats via Lightning - much lower than on-cha
 
 ### Why use Lightning for mining payouts?
 - No on-chain fees eating your profits
-- Instant settlement
+- Near-near-instant settlement
 - Daily payouts possible
 - Works great for small miners
